@@ -1,5 +1,7 @@
 import Carrinho from './Carrinho';
 export default function BarraBusca(props) {
+    
+    console.log(props.qtdCarrinho);
     return (
         <>
             <div style={{
@@ -58,7 +60,7 @@ export default function BarraBusca(props) {
                     >Buscar</button>
                 </div>
                 <div>
-                    <Carrinho />
+                    <Carrinho qtdCarrinho={props.qtdCarrinho}/>
                 </div>
             </div>
             <div style={{

@@ -1,6 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export default function Produto(props){
     const [quantidade, setQuantidade] = useState(1);
+    const [Item, setItem] = useState(0);
+    
+    function AdicionaCarrinho(){
+        setItem(Item + 1);
+        props.setItens(props.qtdCarrinho + 1);
+    }
+    
+    /*useEffect(() =>{
+        props.setItens(props.qtdCarrinho + Item)
+    },[])*/
+
+    //console.log();
+    
     return(
         <div style={{
             width: '200px',
@@ -64,7 +77,7 @@ export default function Produto(props){
                     min={1}/>
             </div>
             <div id='botao-comprar'>
-                <button 
+                <button onClick={() => AdicionaCarrinho()}
                     style={{
                         backgroundColor: 'rgb(255,60,60)',
                         color: 'white',

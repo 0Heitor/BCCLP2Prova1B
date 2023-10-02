@@ -9,15 +9,16 @@ function App() {
       .then((resposta) => resposta.json())
       .then((produtos) => {
         setProdutos(produtos);
-      });  
+      });
   },[]);
-
+  const [Itens,setItens] = useState(0);
   const [produtos, setProdutos] = useState([]);
+  //console.log(Itens);
   return (
     <div className="App">
       <Cabecalho/>
-      <BarraBusca/>
-      <GradeProdutos listaProdutos={produtos}/>
+      <BarraBusca qtdCarrinho={Itens}/>
+      <GradeProdutos listaProdutos={produtos} qtdCarrinho={Itens} setItens={setItens}/>
     </div>
   );
 }

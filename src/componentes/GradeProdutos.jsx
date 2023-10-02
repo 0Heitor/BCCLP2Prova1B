@@ -1,6 +1,14 @@
 import Produto from "../templates/Produto";
+import { useState, useEffect } from "react";
 
 export default function GradeProdutos(props){
+    const [itens,setitens] = useState(props.qtdCarrinho)
+    console.log(props.qtdCarrinho);
+
+    useEffect(() => {
+        props.setItens(itens);
+    },[])
+
     if (props.listaProdutos){
         return(
             <div style={{
@@ -12,7 +20,7 @@ export default function GradeProdutos(props){
                 padding: '10px',
                 gap: '20px'}}>
                     {props.listaProdutos.map((produto) => (
-                        <Produto key={produto.id} produto={produto}/>
+                        <Produto key={produto.id} produto={produto} qtdCarrinho={itens} setItens={setitens}/>
                     ))}
             </div>
         )
