@@ -4,15 +4,19 @@ import Cabecalho from "./templates/Cabecalho";
 import { useEffect, useState } from "react";
 
 function App() {
+  
+  const [Itens,setItens] = useState(0);
+  const [produtos, setProdutos] = useState([]);
+  
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((resposta) => resposta.json())
       .then((produtos) => {
         setProdutos(produtos);
       });
+    //setItens(Itens);
   },[]);
-  const [Itens,setItens] = useState(0);
-  const [produtos, setProdutos] = useState([]);
+  
   //console.log(Itens);
   return (
     <div className="App">

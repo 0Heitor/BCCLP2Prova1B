@@ -2,12 +2,11 @@ import Produto from "../templates/Produto";
 import { useState, useEffect } from "react";
 
 export default function GradeProdutos(props){
-    const [itens,setitens] = useState(props.qtdCarrinho)
-    console.log(props.qtdCarrinho);
-
-    useEffect(() => {
-        props.setItens(itens);
-    },[])
+    const [itens,setitens] = useState(0)
+    //console.log(props.qtdCarrinho);
+    //console.log(itens);
+    //if(itens != 0)
+    props.setItens(itens);
 
     if (props.listaProdutos){
         return(

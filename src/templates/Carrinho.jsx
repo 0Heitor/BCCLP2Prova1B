@@ -49,7 +49,7 @@ export default function Carrinho(props) {
                 <p style={{
                     margin: '0px',
                     padding: '0px',
-                }}>{props.qtdCarrinho || 0} item</p>
+                }}>{props.qtdCarrinho}{props.qtdCarrinho > 0 ? " itens" : " item"}</p>
             </div>
             <div id='segurança' style={{
                 display: 'flex',
