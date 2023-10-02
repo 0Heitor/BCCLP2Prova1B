@@ -1,7 +1,7 @@
 {
   "name": "bcclp2prova1b",
   "version": "0.1.0",
-  "homepage": "https://OHeitor.github.io/BCCLP2Prova1B",
+  "homepage": "https://0Heitor.github.io/BCCLP2Prova1B",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
